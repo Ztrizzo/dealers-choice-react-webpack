@@ -1,0 +1,40 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#main{
+  display: flex;
+  flex-wrap:wrap;
+}
+
+table{
+  flex-basis: 100%;
+}
+
+tr:hover{
+  background: gray;
+}
+
+td{
+  text-align: center;
+}
+
+#addButton{
+  justify-self: end;
+  padding: 1.5em;
+  background-color: rgb(45, 190, 45);
+  border-radius: 50%;
+}
+
+#filler{
+  flex-grow: 2;
+  width: 1px;
+}
+
+#description-input{
+  height: 10em;
+}
+
