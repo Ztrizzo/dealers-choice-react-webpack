@@ -5,7 +5,7 @@ const TaskList = (props) => {
     <tbody>
             {props.tasks.map(task => {
               return(
-                <tr key={task.id} onClick={() => props.select(task.id)}>
+                <tr className='row' key={task.id} onClick={() => props.select(task.id)}>
                   <td>{task.heading}</td>
                   <td>{task.dueDate}</td>
                   <td>{task.importance}</td>

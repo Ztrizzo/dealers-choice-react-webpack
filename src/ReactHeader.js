@@ -1,12 +1,12 @@
 import React from 'react';
 
-const ReactHeader = () => {
+const ReactHeader = (props) => {
   return(
     <thead>
           <tr>
-            <th>Description</th>
-            <th>Due Date</th>
-            <th>Importance</th>
+            <th className='header-sort'>Description</th>
+            <th className='header-sort'>Due Date</th>
+            <th className='header-sort' onClick={props.sortByImportance}>Importance</th>
           </tr>
         </thead>
   )
