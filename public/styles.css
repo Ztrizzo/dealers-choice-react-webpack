@@ -12,11 +12,17 @@ body{
 
 table{
   flex-basis: 100%;
+  border-collapse: collapse;
 }
 
-.td{
+.row{
   border-bottom: 1px solid;
-  margin-top: .5rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+td{
+  padding: .5rem;
 }
 
 .row:hover{
@@ -28,12 +34,15 @@ table{
 }
 
 #addButton{
+  margin-top: 1em;
   justify-self: end;
   padding: 1.5em;
   background-color: rgb(45, 190, 45);
   border-radius: 50%;
   box-shadow: 5px 5px 10px #888888;
 }
+
+
 
 #filler{
   flex-grow: 2;
@@ -55,6 +64,11 @@ table{
   display:flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 3em;
+  padding: 2em;
+  border: 1px solid;
+  border-radius: 3rem;
+  box-shadow: 5px 5px 10px;
 }
 
 #new-task-info > div{
@@ -62,6 +76,7 @@ table{
   justify-content: space-between;
 }
 #new-task-info > div > *{
+  margin-top: .5em;
   margin-left: 1em;
   margin-right: 1em;
 }
