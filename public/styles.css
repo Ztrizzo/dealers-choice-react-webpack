@@ -1,7 +1,7 @@
 body{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: space-between;
   height: 100vh;
 }
 
@@ -12,6 +12,11 @@ body{
 
 table{
   flex-basis: 100%;
+}
+
+.td{
+  border-bottom: 1px solid;
+  margin-top: .5rem;
 }
 
 .row:hover{
@@ -59,4 +64,20 @@ table{
 #new-task-info > div > *{
   margin-left: 1em;
   margin-right: 1em;
+}
+
+#detail-view{
+  flex-basis: 100%;
+  display:flex;
+  flex-direction: column;
+  margin: 3em;
+  padding: 2em;
+  border: 1px solid;
+  border-radius: 3rem;
+  box-shadow: 5px 5px 10px;
+}
+
+#detail-view > div{
+  margin-top: 1em;
+  margin-bottom: 1em;
 }

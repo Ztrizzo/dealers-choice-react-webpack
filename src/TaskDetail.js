@@ -2,7 +2,7 @@ import React from 'react';
 
 const TaskDetail = (props) => {
   return(
-    <div>
+    <div id="detail-view">
       <h3>{props.task.heading}</h3>
       <div>Importance: {props.task.importance}</div>
       <div>Description: {props.task.description}</div>

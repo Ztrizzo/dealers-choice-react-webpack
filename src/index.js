@@ -45,7 +45,8 @@ class Main extends React.Component{
 
   setNewTask(){
     this.setState({
-      newTaskView: true
+      newTaskView: true,
+      selected: {}
     })
   }
 
@@ -53,13 +54,15 @@ class Main extends React.Component{
     const response = (await axios.get(`/api/task/${id}`)).data;
 
     this.setState({
-      selected: response
+      selected: response,
+      newTaskView:false
     })
   }
 
   clearSelected(){
     this.setState({
-      selected: {}
+      selected: {},
+      newTaskView: false
     })
   }
 
@@ -101,7 +104,7 @@ class Main extends React.Component{
     //   ) 
       
     // }
-    if (Object.keys(this.state.selected).length === 0){
+    // if (Object.keys(this.state.selected).length === 0){
       return (
         <div id='main'>
           <table>
@@ -114,15 +117,16 @@ class Main extends React.Component{
         
         {this.state.newTaskView ? <div id='new-task-form'><NewTask newTask={this.newTask}/></div> : <span></span>}
 
+        {Object.keys(this.state.selected).length > 0 ? <TaskDetail task={this.state.selected} clearSelected={this.clearSelected} completeTask={this.completeTask}/> : <div></div>}
         </div>
         
       )
-    }
-    else{
-      return(
-        <TaskDetail task={this.state.selected} clearSelected={this.clearSelected} completeTask={this.completeTask}/>
-      )
-    }
+    // }
+    // else{
+    //   return(
+    //     <TaskDetail task={this.state.selected} clearSelected={this.clearSelected} completeTask={this.completeTask}/>
+    //   )
+    // }
     
   }
 }
