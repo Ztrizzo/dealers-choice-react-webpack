@@ -12,7 +12,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 const init = async () => {
   await syncAndSeed();
-  app.listen(process.env.PORT, () => {console.log(`listening on port ${PORT}`)})
+  app.listen(PORT, () => {console.log(`listening on port ${PORT}`)})
 }
 
 init();
