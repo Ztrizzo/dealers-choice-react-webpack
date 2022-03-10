@@ -1,5 +1,5 @@
 const {Sequelize, STRING, UUID, UUIDV4, DATEONLY, ENUM} = require('sequelize');
-const sequelize = new Sequelize(process.env.DATABASE || 'postgres://localhost/dealers-choice-react-webpack');
+const sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://localhost/dealers-choice-react-webpack');
 const faker = require('faker');
 
 const Task = sequelize.define('Task', {
