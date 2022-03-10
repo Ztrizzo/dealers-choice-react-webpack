@@ -10,9 +10,11 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, '/dist')));
 app.use(express.static(path.join(__dirname, '/public')));
 
+app.listen(PORT, () => {console.log(`listening on port ${PORT}`)})
+
 const init = async () => {
   await syncAndSeed();
-  app.listen(PORT, () => {console.log(`listening on port ${PORT}`)})
+  
 }
 
 init();
