@@ -107,6 +107,7 @@ class Main extends React.Component{
     // if (Object.keys(this.state.selected).length === 0){
       return (
         <div id='main'>
+          <h1>TODO</h1>
           <table>
             <ReactHeader sortByImportance={this.sortByImportance}/>
             <TaskList tasks={this.state.taskList} select={this.select}/>

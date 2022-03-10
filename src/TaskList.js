@@ -9,7 +9,7 @@ const TaskList = (props) => {
                 <tr className='row' key={task.id} onClick={() => props.select(task.id)}>
                   <td>{task.heading}</td>
                   <td>{task.dueDate}</td>
-                  <td>{Array(task.importance * 1).fill('\u2B50').join('')}</td>
+                  <td>{Array(task.importance * 1).fill('\u2605').join('')}</td>
                 </tr>
               )
             })}

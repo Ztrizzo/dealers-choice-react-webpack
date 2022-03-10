@@ -33,6 +33,15 @@ td{
   background: gray;
 }
 
+.header-sort{
+  text-align: left;
+}
+
+h1{
+  width: 100vw;
+  text-align: center;
+}
+
 #addButton{
   margin-top: 1em;
   justify-self: end;
